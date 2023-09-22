@@ -314,15 +314,10 @@ img {
   color: var(--slutty-icon);
 }
 
-.home__blob {
-  width: 200px;
-  fill: var(--first-color);
-}
-
 #home__img {
   height: 100%;
   width: 100%;
-  background-image: url("assets/img/amos.png");
+  background-image: url("img/amos.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -918,9 +913,6 @@ img {
     column-gap: 0;
   }
 
-  .home__blob {
-    width: 180px;
-  }
 
 
 
@@ -1079,9 +1071,6 @@ img {
     column-gap: 2rem;
   }
 
-  .home__blob {
-    width: 270px;
-  }
 
 
   .about__container {
@@ -1196,9 +1185,6 @@ img {
     padding: 0;
   }
 
-  .home__blob {
-    width: 320px;
-  }
 
   .home__social {
     transform: translateX(-6rem);
