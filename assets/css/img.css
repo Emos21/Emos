@@ -1,0 +1,121 @@
+
+  
+  .thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 190px);
+    gap: 1rem;
+  }
+  .thumbs > a {
+    width: 100%;
+    aspect-ratio: 1;
+  
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px white, 0 5px 8px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .thumbs > a img {
+    transform: scale(1);
+    transition: transform 0.1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .thumbs > a:hover img {
+    transform: scale(1.1);
+  }
+  
+  .lightbox {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 100;
+  }
+  .lightbox:has(div:target) {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  .lightbox a.nav {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
+    opacity: 0.5;
+    font-weight: 200;
+  }
+  .lightbox a.nav:hover {
+    opacity: 1;
+  }
+  .lightbox .target {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    transform: scale(0);
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .lightbox .target *:first-child,
+  .lightbox .target *:last-child {
+    text-align: center;
+  }
+  @media all and (max-width: 600px) {
+    .lightbox .target *:first-child,
+    .lightbox .target *:last-child {
+      flex: 0 0 50px;
+    }
+  }
+  .lightbox .target .content {
+    transform: scale(0.9);
+    opacity: 0;
+    flex: 1 1 auto;
+    align-self: center;
+    max-height: 100%;
+    min-height: 0;
+    min-width: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    
+  }
+  .lightbox .target .content img {
+    /* min-width: 100%; */
+    min-height: 100%;
+    max-width: 100%;
+    max-height: calc(90vh - 40px);
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lightbox .target:target {
+    transform: scale(1);
+  }
+  .lightbox .target:target .content {
+    transform: scale(1);
+    opacity: 1;
+  }
+  .lightbox .close {
+    position: absolute;
+    right: 33px;
+    top: 10px;
+    
+  }
+  
+  .lightbox svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+    font-size: 3.5rem;
+  }
