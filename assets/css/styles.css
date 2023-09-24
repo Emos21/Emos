@@ -317,7 +317,7 @@ img {
 #home__img {
   height: 100%;
   width: 100%;
-  background-image: url("../assets/img/amos.png");
+  background-image: url("https://emos21.github.io/Emos/assets/img/amos.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -979,7 +979,7 @@ img {
     justify-self: center;
     height: 80vh;
     width: 100%;
-    background-image: url("../assets/img/amos.png");
+    background-image: url("https://emos21.github.io/Emos/assets/img/amos.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
